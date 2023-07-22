@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^picbuddy\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.picbuddy\.in$
+RewriteRule ^/?$ "https\:\/\/picbuddy\.in\/" [R=301,L]
+
